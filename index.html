@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/logo.css" />
+    <link rel="stylesheet" href="css/features.css" />
     <!-- Main css file -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,6 +23,7 @@
     <div id="header"></div>
     <div id="banner"></div>
     <div id="logo"></div>
+    <div id="features"></div>
 
     <script>
       function loadComponent(id, url, callback) {
@@ -49,6 +51,15 @@
               loadLogos();
             } else {
               console.error("loadLogos function is not available.");
+            }
+          });
+        });
+        loadComponent("features", "./components/features.html", function () {
+          loadScript("./js/features.js", function () {
+            if (typeof loadFeatures === "function") {
+              loadFeatures();
+            } else {
+              console.error("loadFeatures function is not available");
             }
           });
         });

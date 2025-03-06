@@ -1,23 +1,18 @@
 .banner {
   padding-top: 130px;
 }
-.banner-badge {
-  display: flex;
-  justify-content: center;
-}
 .title {
   padding: 30px 200px 0 200px;
   color: #1e293b;
   font-weight: 800;
   font-size: 40px;
   text-align: center;
-  /* letter-spacing: -5px; */
 }
 .banner-paragraph {
-  padding: 10px 250px 0 250px;
+  padding: 10px 200px 0 200px;
   text-align: center;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: #475569;
 }
 .app-logo {
