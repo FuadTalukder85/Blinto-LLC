@@ -1,0 +1,14 @@
+.company-logo {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.logo-img {
+  width: 100px;
+  padding: 25px 50px;
+}

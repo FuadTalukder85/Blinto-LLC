@@ -14,25 +14,44 @@
     <!-- css file -->
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
+    <link rel="stylesheet" href="css/logo.css" />
     <!-- Main css file -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="header"></div>
     <div id="banner"></div>
+    <div id="logo"></div>
 
     <script>
-      function loadComponent(id, url) {
+      function loadComponent(id, url, callback) {
         fetch(url)
           .then((response) => response.text())
           .then((data) => {
             document.getElementById(id).innerHTML = data;
+            if (callback) callback();
           })
           .catch((error) => console.error(`Error loading ${id}:`, error));
       }
+      function loadScript(url, callback) {
+        const script = document.createElement("script");
+        script.src = url;
+        script.onload = callback;
+        script.onerror = () => console.error(`Error loading script: ${url}`);
+        document.body.appendChild(script);
+      }
       window.onload = function () {
-        loadComponent("header", "/components/header.html");
-        loadComponent("banner", "/components/banner.html");
+        loadComponent("header", "./components/header.html");
+        loadComponent("banner", "./components/banner.html");
+        loadComponent("logo", "./components/logo.html", function () {
+          loadScript("./js/logo.js", function () {
+            if (typeof loadLogos === "function") {
+              loadLogos();
+            } else {
+              console.error("loadLogos function is not available.");
+            }
+          });
+        });
       };
     </script>
     <script src="js/main.js"></script>
