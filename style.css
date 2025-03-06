@@ -5,6 +5,9 @@ body {
   padding: 0;
   margin: 0 auto;
 }
+h1 {
+  margin: 0;
+}
 ul,
 li {
   list-style: none;
@@ -21,7 +24,7 @@ li {
   background: #eef2ff;
   color: #4f46e5;
   text-align: center;
-  padding: 6px 12px;
+  padding: 7px 12px;
   font-weight: 600;
   font-size: 14px;
   border-radius: 40px;
