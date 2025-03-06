@@ -1,0 +1,7 @@
+.banner {
+  padding-top: 130px;
+}
+.banner-badge {
+  display: flex;
+  justify-content: center;
+}

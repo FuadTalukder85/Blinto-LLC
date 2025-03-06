@@ -13,11 +13,13 @@
     />
     <!-- css file -->
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/banner.css" />
     <!-- Main css file -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="header"></div>
+    <div id="banner"></div>
 
     <script>
       function loadComponent(id, url) {
@@ -30,7 +32,9 @@
       }
       window.onload = function () {
         loadComponent("header", "/components/header.html");
+        loadComponent("banner", "/components/banner.html");
       };
     </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
