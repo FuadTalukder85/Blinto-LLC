@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/logo.css" />
     <link rel="stylesheet" href="css/features.css" />
+    <link rel="stylesheet" href="css/statistics.css" />
     <!-- Main css file -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -24,6 +25,7 @@
     <div id="banner"></div>
     <div id="logo"></div>
     <div id="features"></div>
+    <div id="statistics"></div>
 
     <script>
       function loadComponent(id, url, callback) {
@@ -63,6 +65,7 @@
             }
           });
         });
+        loadComponent("statistics", "./components/statistics.html");
       };
     </script>
     <script src="js/main.js"></script>
