@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/features.css" />
     <link rel="stylesheet" href="css/statistics.css" />
     <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <!-- Main css file -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -33,6 +34,7 @@
     <div id="features"></div>
     <div id="statistics"></div>
     <div id="testimonials"></div>
+    <div id="contact"></div>
 
     <script>
       function loadComponent(id, url, callback) {
@@ -86,6 +88,7 @@
             });
           }
         );
+        loadComponent("contact", "./components/contact.html");
       };
     </script>
     <script src="js/main.js"></script>
