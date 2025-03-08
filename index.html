@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/who.css" />
     <link rel="stylesheet" href="css/testimonials.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/faq.css" />
     <link rel="stylesheet" href="css/cta.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <!-- Main css file -->
@@ -39,6 +40,7 @@
     <div id="who"></div>
     <div id="testimonials"></div>
     <div id="contact"></div>
+    <div id="faq"></div>
     <div id="cta"></div>
     <div id="footer"></div>
 
@@ -96,6 +98,15 @@
           }
         );
         loadComponent("contact", "./components/contact.html");
+        loadComponent("faq", "./components/faq.html", function () {
+          loadScript("./js/faq.js", function () {
+            if (typeof loadFAQs === "function") {
+              loadFAQs();
+            } else {
+              console.error("loadFAQs function is not available");
+            }
+          });
+        });
         loadComponent("cta", "./components/cta.html");
         loadComponent("footer", "./components/footer.html");
       };
