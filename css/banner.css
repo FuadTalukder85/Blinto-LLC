@@ -27,6 +27,36 @@
   margin-top: 60px;
   background: linear-gradient(#ffffff, #9fa1f4);
 }
-.MockUp {
+.banner-gradiant img:nth-child(2) {
+  display: none;
+}
+.banner-gradiant img:nth-child(3) {
   margin-left: -290px;
+}
+
+@media (max-width: 380px) {
+  .title {
+    font-size: 22px;
+    padding: 10px 18px;
+  }
+  .banner-paragraph {
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+  .banner-gradiant {
+    position: relative;
+  }
+  .banner-gradiant img:first-child {
+    display: none;
+  }
+  .banner-gradiant img:nth-child(2) {
+    display: block;
+  }
+  .banner-gradiant img:nth-child(3) {
+    position: absolute;
+    top: 26%;
+    right: 5%;
+    width: 180px;
+    margin-left: 0px;
+  }
 }

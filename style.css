@@ -71,3 +71,9 @@ li {
   padding: 10px 15px;
   border-radius: 40px;
 }
+/* Responsive style */
+@media (max-width: 380px) {
+  .max-width {
+    width: 380px;
+  }
+}
