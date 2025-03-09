@@ -31,7 +31,7 @@
   margin-right: -150px;
   margin-top: 30px;
 }
-ctn-responsive {
+.cta-responsive {
   display: none;
 }
 /* Responsive style */
@@ -61,7 +61,7 @@ ctn-responsive {
   .cta-content button:first-child {
     margin-bottom: 12px;
   }
-  .ctn-responsive {
+  .cta-responsive {
     margin-top: 48px;
   }
 }
