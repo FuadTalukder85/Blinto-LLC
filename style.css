@@ -86,4 +86,10 @@ li {
     padding: 25px 18px;
     font-size: 16px;
   }
+  .btn-outline {
+    width: 100%;
+  }
+  .btn-fill {
+    width: 100%;
+  }
 }

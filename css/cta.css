@@ -31,3 +31,37 @@
   margin-right: -150px;
   margin-top: 30px;
 }
+ctn-responsive {
+  display: none;
+}
+/* Responsive style */
+@media (max-width: 380px) {
+  .cta-main {
+    display: block;
+    height: 860px;
+    padding: 64px 0;
+  }
+  .cta-content {
+    width: 100%;
+  }
+  .cta-title {
+    font-size: 30px;
+    padding: 0 18px;
+  }
+  .cta-paragraph {
+    font-size: 16px;
+    padding: 24px 18px;
+  }
+  .cta-img {
+    display: none;
+  }
+  .btn-cta {
+    padding: 0 18px;
+  }
+  .cta-content button:first-child {
+    margin-bottom: 12px;
+  }
+  .ctn-responsive {
+    margin-top: 48px;
+  }
+}

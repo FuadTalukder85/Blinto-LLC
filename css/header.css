@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .header ul {
   display: flex;
   align-items: center;
@@ -11,4 +12,49 @@
   color: #475569;
   font-weight: 700;
   font-size: 16px;
+}
+
+#menuContainer {
+  display: none;
+}
+
+/* Responsive style */
+@media (max-width: 380px) {
+  .header {
+    padding: 18px;
+  }
+
+  .header ul {
+    display: none;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  #menuContainer {
+    width: 320px;
+    height: 900px;
+    background: rebeccapurple;
+    position: fixed;
+    top: 0;
+    right: -320px; /* Start hidden to the right */
+    transition: right 0.3s ease; /* Slide transition */
+  }
+
+  #menuContainer.show {
+    right: 0; /* Move to the left to show menu */
+  }
+}
+
+/* Styling for the menu items */
+#menuContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#menuContainer li {
+  padding: 10px;
+  color: white;
+  font-size: 18px;
 }

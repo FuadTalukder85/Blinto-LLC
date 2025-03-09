@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <div id="header"></div> -->
+    <div id="header"></div>
     <div id="banner"></div>
     <div id="logo"></div>
     <div id="features"></div>
@@ -41,7 +41,7 @@
     <div id="testimonials"></div>
     <div id="contact"></div>
     <div id="faq"></div>
-    <!-- <div id="cta"></div> -->
+    <div id="cta"></div>
     <div id="footer"></div>
 
     <script>
@@ -62,7 +62,15 @@
         document.body.appendChild(script);
       }
       window.onload = function () {
-        loadComponent("header", "./components/header.html");
+        loadComponent("header", "./components/header.html", function () {
+          loadScript("./js/header.js", function () {
+            if (typeof loadMenu === "function") {
+              loadMenu();
+            } else {
+              console.error("loadMenu function is not available.");
+            }
+          });
+        });
         loadComponent("banner", "./components/banner.html");
         loadComponent("logo", "./components/logo.html", function () {
           loadScript("./js/logo.js", function () {
