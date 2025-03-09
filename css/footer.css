@@ -41,3 +41,31 @@
   font-size: 14px;
   color: #94a3b8;
 }
+.bottom-title {
+  display: none;
+}
+/* Responsive style */
+@media (max-width: 380px) {
+  .footer-section {
+    padding: 32px 0;
+  }
+  .footer {
+    display: block;
+    padding: 0 16px;
+  }
+  .footer-title {
+    margin-top: 32px;
+  }
+  .bottom-footer {
+    flex-direction: column;
+  }
+  .bottom-title {
+    display: block;
+  }
+  .bottom-title-02 {
+    display: none;
+  }
+  .down-arrow {
+    margin-top: 32px;
+  }
+}

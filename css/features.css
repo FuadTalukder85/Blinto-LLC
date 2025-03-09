@@ -27,3 +27,13 @@
   color: #475569;
   margin-top: 10px;
 }
+/* Responsive style */
+@media (max-width: 380px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .features-description {
+    padding: 0 20px;
+  }
+}

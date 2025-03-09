@@ -76,4 +76,14 @@ li {
   .max-width {
     width: 380px;
   }
+  .badge {
+    margin: 0 24px;
+  }
+  .common-title {
+    font-size: 30px;
+  }
+  .common-paragraph {
+    padding: 25px 18px;
+    font-size: 16px;
+  }
 }

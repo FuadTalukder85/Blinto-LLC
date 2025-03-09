@@ -37,3 +37,25 @@
   color: #475569;
   margin-top: 12px;
 }
+/* Responsive style */
+@media (max-width: 380px) {
+  .who-title {
+    font-size: 30px;
+    padding: 0 18px;
+  }
+  .who-paragraph {
+    width: 90%;
+    padding: 16px 18px;
+    font-size: 18px;
+  }
+  .who-animie {
+    display: inline;
+  }
+  .who-content {
+    margin: 8px 18px;
+  }
+  .who-animie img {
+    width: 90%;
+    padding: 16px 18px;
+  }
+}

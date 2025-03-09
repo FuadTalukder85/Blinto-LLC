@@ -38,3 +38,18 @@
   transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   padding: 0 10px;
 }
+/* Responsive style */
+@media (max-width: 380px) {
+  .faq {
+    padding: 64px 0;
+  }
+  .faq-container {
+    margin: 20px auto;
+  }
+  .faq-title p {
+    padding-right: 55px;
+  }
+  .faq-answer {
+    padding-right: 40px !important;
+  }
+}

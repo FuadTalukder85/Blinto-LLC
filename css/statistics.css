@@ -37,3 +37,20 @@
   font-size: 18px;
   color: #475569;
 }
+/* Responsive style */
+@media (max-width: 380px) {
+  .statistics {
+    margin-top: 64px;
+    padding: 64px 0;
+  }
+  .statistics-border {
+    border-right: none;
+    border-bottom: 1px solid #cbd5e1;
+    padding-right: 0;
+    padding-bottom: 32px;
+    margin: 0 18px 32px 18px;
+  }
+  .statistics-count {
+    display: inline;
+  }
+}
