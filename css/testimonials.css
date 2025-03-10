@@ -1,6 +1,7 @@
 .testimonials-section {
   background: #f8fafc;
   padding: 96px 0;
+  width: 100%;
 }
 .testimonial {
   column-count: 3;

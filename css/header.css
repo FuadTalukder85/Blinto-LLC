@@ -59,4 +59,13 @@
   .header-btn {
     display: none;
   }
+  .header-res {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+  }
+  .header-res button:nth-child(2) {
+    margin-top: 15px;
+  }
 }

@@ -61,6 +61,7 @@
   }
   .bottom-title {
     display: block;
+    margin-top: 24px;
   }
   .bottom-title-02 {
     display: none;
