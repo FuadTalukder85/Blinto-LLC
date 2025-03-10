@@ -1,5 +1,6 @@
 function loadtestimonials() {
   const container = document.getElementById("testimonialsContainer");
+  const loadMoreBtn = document.querySelector(".tes-btn");
   if (!container) {
     console.error("Testimonials container not found");
     return;
@@ -79,7 +80,6 @@ function loadtestimonials() {
     },
   ];
 
-  // function to generate stars based on rating
   function generateStars(rating) {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -100,10 +100,15 @@ function loadtestimonials() {
     return starsHTML;
   }
 
-  const testimonialsHTML = testimonials
-    .map(
-      (testimonial, index) =>
-        `<div class="testimonial-content">
+  function renderTestimonials(showAll = false) {
+    const visibleTestimonials = showAll
+      ? testimonials
+      : testimonials.slice(0, 4);
+
+    const testimonialsHTML = visibleTestimonials
+      .map(
+        (testimonial, index) =>
+          `<div class="testimonial-content">
           <span class="stars">${generateStars(testimonial.rating)}</span>
           <p class="review">${testimonial.review}</p>
           <div class="reviewer">
@@ -115,10 +120,24 @@ function loadtestimonials() {
               <p class="testimonial-designation">${testimonial.designation}</p>
             </div>         
           </div>
-        </div> 
-        `
-    )
-    .join("");
-  container.innerHTML = `<div class="testimonial">${testimonialsHTML}</div>`;
+        </div>`
+      )
+      .join("");
+
+    container.innerHTML = `<div class="testimonial">${testimonialsHTML}</div>`;
+  }
+  if (window.innerWidth <= 380) {
+    renderTestimonials(false);
+    loadMoreBtn.style.display = "block";
+  } else {
+    renderTestimonials(true);
+    loadMoreBtn.style.display = "none";
+  }
+
+  // Load more button event
+  loadMoreBtn.addEventListener("click", () => {
+    renderTestimonials(true);
+    loadMoreBtn.style.display = "none";
+  });
 }
 document.addEventListener("DOMContentLoaded", loadtestimonials);

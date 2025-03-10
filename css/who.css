@@ -21,10 +21,19 @@
   gap: 150px;
   margin-top: 65px;
 }
+.who-animie img {
+  display: none;
+}
+.who-animie img.active {
+  display: block;
+}
 .who-content {
   border-left: 4px solid #e0e7ff;
   padding: 32px 24px;
   margin-bottom: 8px;
+}
+.who-content.active {
+  border-color: #4f46e5;
 }
 .who-animie h5 {
   font-weight: 700;
